@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\SQLiteMigrations\**" />
+    <EmbeddedResource Remove="Migrations\SQLiteMigrations\**" />
+    <None Remove="Migrations\SQLiteMigrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\MSSQLMigrations\20210306111337_InitialMSSQL.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306111337_InitialMSSQL.Designer.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306111917_InitialMSSQL.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306111917_InitialMSSQL.Designer.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306112353_InitialMSSQL.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306112353_InitialMSSQL.Designer.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306113101_InitialMSSQL.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306113101_InitialMSSQL.Designer.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306114253_InitialMSSQL.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306114253_InitialMSSQL.Designer.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306114444_InitialMSSQL.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306114444_InitialMSSQL.Designer.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306114713_InitialMSSQL.cs" />
+    <Compile Remove="Migrations\MSSQLMigrations\20210306114713_InitialMSSQL.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.12">
+      <PrivateAssets>all</PrivateAssets>
+      <!--<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>-->
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.12" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="3.1.12" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DBInjectionWithMultiProviders.Domain\DBInjectionWithMultiProviders.Domain.csproj" />
+    <ProjectReference Include="..\DBInjectionWithMultiProviders.Extensions\DBInjectionWithMultiProviders.Extensions.csproj" />
+  </ItemGroup>
+
+</Project>

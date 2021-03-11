@@ -1,0 +1,9 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model DBInjectionWithMultiProviders.Plugin1.Models.Entities.Security
+<div class="text-center">
+    <h1 class="display-4">Welcome @(Model?.LoginIp) @Context.Request.HttpContext.Connection.RemoteIpAddress</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+</div>
